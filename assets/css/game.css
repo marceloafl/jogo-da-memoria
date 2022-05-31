@@ -1,0 +1,58 @@
+.game{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+    perspective: 1000px;
+    width: 1024px;
+
+    background-color: red;
+
+}
+
+.card--wrapper{
+    align-items: center;
+    border-radius: 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    height: 128px;
+    justify-content: center;
+    margin: 10px;
+    padding: 5px;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .9s;
+    width: 180px;
+
+    background-color: yellow;
+}
+
+.card--wrapper:active{
+    transform: scale(.93);
+    transition: .3s;
+}
+
+.card--front{
+    backface-visibility: hidden;
+    border-radius: 5px;
+    position: absolute;
+    transform: rotateY(180deg);
+    width: 50%;
+
+    background-color: green;
+}
+
+.card--back{
+    backface-visibility: hidden;
+    border-radius: 5px;
+    position: absolute;
+    width: inherit;
+
+    /*display: none;*/
+}
+
+.flip{
+    transform: rotateY(180deg);
+}

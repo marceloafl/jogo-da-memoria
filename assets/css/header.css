@@ -1,0 +1,20 @@
+.header{
+    box-sizing: border-box;
+    margin: 0 0 .5rem;
+    padding: 1rem;
+
+    background-color: #0F1D42;
+}
+
+.header__title{
+    color: #FFF;
+    font-size: 2.5rem;
+    margin-bottom: .5rem;
+    text-align: center;
+}
+
+.header__description{
+    color: #FFF;
+    font-size: 1.5rem;
+    text-align: center;
+}

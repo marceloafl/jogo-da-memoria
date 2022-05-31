@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Memória</title>
+    <link href="assets/css/reset.css" rel="stylesheet">
+    <link href="assets/css/header.css" rel="stylesheet">
+    <link href="assets/css/level.css" rel="stylesheet">
+    <link href="assets/css/game.css" rel="stylesheet">
+</head>
+<body>
+    <section class="header">
+        <h1 class="header__title">Jogo da Memória</h1>
+        <p class="header__description">Use a memória e encontre os pares das cartas que representam tecnologias de desenvolvimento.</p>
+    </section>
+    <section class="level">
+        <label for="levels" class="level__label">Selecione o nível</label>
+        <select name="levels" id="levels" class="level__select">
+            <option value="facil">Fácil</option>
+            <option value="intermediadio">Intermediário</option>
+            <option value="dificil">Difícil</option>
+        </select>
+    </section>
+    <section class="game">
+        <div class="card--wrapper" data-card="html">
+            <img src="assets/img/html.png" alt="Frente da imagem" class="card--front">
+            <img src="assets/img/verso.jpeg" alt="Verso da carta" class="card--back">
+        </div>
+        <div class="card--wrapper" data-card="html">
+            <img src="assets/img/html.png" alt="" class="card--front">
+            <img src="assets/img/verso.jpeg" alt="Verso da carta" class="card--back">
+        </div>
+        <div class="card--wrapper" data-card="css">
+            <img src="assets/img/css.png" alt="" class="card--front">
+            <img src="assets/img/verso.jpeg" alt="Verso da carta" class="card--back">
+        </div>
+        <div class="card--wrapper" data-card="css">
+            <img src="assets/img/css.png" alt="" class="card--front">
+            <img src="assets/img/verso.jpeg" alt="Verso da carta" class="card--back">
+        </div>
+        <div class="card--wrapper" data-card="javascript">
+            <img src="assets/img/javascript.png" alt="" class="card--front">
+            <img src="assets/img/verso.jpeg" alt="Verso da carta" class="card--back">
+        </div>
+        <div class="card--wrapper" data-card="javascript">
+            <img src="assets/img/javascript.png" alt="" class="card--front">
+            <img src="assets/img/verso.jpeg" alt="Verso da carta" class="card--back">
+        </div>
+        <div class="card--wrapper" data-card="react">
+            <img src="assets/img/react.png" alt="" class="card--front">
+            <img src="assets/img/verso.jpeg" alt="Verso da carta" class="card--back">
+        </div>
+        <div class="card--wrapper" data-card="react">
+            <img src="assets/img/react.png" alt="" class="card--front">
+            <img src="assets/img/verso.jpeg" alt="Verso da carta" class="card--back">
+        </div>
+        <div class="card--wrapper" data-card="sql">
+            <img src="assets/img/sql.jpg" alt="" class="card--front">
+            <img src="assets/img/verso.jpeg" alt="Verso da carta" class="card--back">
+        </div>
+        <div class="card--wrapper" data-card="sql">
+            <img src="assets/img/sql.jpg" alt="" class="card--front">
+            <img src="assets/img/verso.jpeg" alt="Verso da carta" class="card--back">
+        </div>
+        <div class="card--wrapper" data-card="java">
+            <img src="assets/img/java.png" alt="" class="card--front">
+            <img src="assets/img/verso.jpeg" alt="Verso da carta" class="card--back">
+        </div>
+        <div class="card--wrapper" data-card="java">
+            <img src="assets/img/java.png" alt="" class="card--front">
+            <img src="assets/img/verso.jpeg" alt="Verso da carta" class="card--back">
+        </div>
+        <div class="card--wrapper" data-card="spring">
+            <img src="assets/img/spring.png" alt="" class="card--front">
+            <img src="assets/img/verso.jpeg" alt="Verso da carta" class="card--back">
+        </div>
+        <div class="card--wrapper" data-card="spring">
+            <img src="assets/img/spring.png" alt="" class="card--front">
+            <img src="assets/img/verso.jpeg" alt="Verso da carta" class="card--back">
+        </div>
+        <div class="card--wrapper" data-card="qa">
+            <img src="assets/img/qa.jpg" alt="" class="card--front">
+            <img src="assets/img/verso.jpeg" alt="Verso da carta" class="card--back">
+        </div>
+        <div class="card--wrapper" data-card="qa">
+            <img src="assets/img/qa.jpg" alt="" class="card--front">
+            <img src="assets/img/verso.jpeg" alt="Verso da carta" class="card--back">
+        </div>
+        <div class="card--wrapper" data-card="git">
+            <img src="assets/img/git.png" alt="" class="card--front">
+            <img src="assets/img/verso.jpeg" alt="Verso da carta" class="card--back">
+        </div>
+        <div class="card--wrapper" data-card="git">
+            <img src="assets/img/git.png" alt="" class="card--front">
+            <img src="assets/img/verso.jpeg" alt="Verso da carta" class="card--back">
+        </div>
+        <div class="card--wrapper" data-card="github">
+            <img src="assets/img/github.png" alt="" class="card--front">
+            <img src="assets/img/verso.jpeg" alt="Verso da carta" class="card--back">
+        </div>
+        <div class="card--wrapper" data-card="github">
+            <img src="assets/img/github.png" alt="" class="card--front">
+            <img src="assets/img/verso.jpeg" alt="Verso da carta" class="card--back">
+        </div>    
+    </section>
+    <script src="main.js"></script>
+</body>
+</html>
