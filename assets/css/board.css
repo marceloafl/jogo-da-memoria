@@ -49,3 +49,11 @@
 .card--flip{
     transform: rotateY(180deg);
 }
+
+.card--highlight{
+    border: 2px solid #00FF00;
+}
+
+.blur{
+    filter:opacity(.1);
+}
