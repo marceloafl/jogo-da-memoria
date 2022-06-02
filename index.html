@@ -22,16 +22,17 @@
         <h1 class="header__title">Jogo da Memória</h1>
         <p class="header__description">Use a memória e encontre os pares das cartas que representam tecnologias de desenvolvimento.</p>
     </section>
-    <section class="board--wrapper" data-board>
+    <section class="board--wrapper" data-wrapper>
         <section class="level">
             <label for="levels" class="level__label">Selecione o nível</label>
-            <select name="levels" id="levels" class="level__select">
-                <option value="facil">Fácil</option>
-                <option value="intermediadio">Intermediário</option>
-                <option value="dificil">Difícil</option>
+            <select name="levels" id="levels" class="level__select" data-select="level">
+                <option value="easy">Fácil</option>
+                <option value="normal" selected>Intermediário</option>
+                <option value="hard">Difícil</option>
             </select>
+            <p class="game__instruction">Clique nas cartas para virá-las.</p>
         </section>
-        <section class="board" data-board>
+        <!-- <section class="board" data-board>
             <div class="card--wrapper" data-card="html">
                 <img src="assets/img/html.png" alt="Frente da imagem" class="card--front">
                 <img src="assets/img/verso.jpeg" alt="Verso da carta" class="card--back">
@@ -112,13 +113,13 @@
                 <img src="assets/img/github.png" alt="" class="card--front">
                 <img src="assets/img/verso.jpeg" alt="Verso da carta" class="card--back">
             </div>    
-        </section>
+        </section> -->
     </section>
     <section class="victory hide" data-modal="victory">
         <span class="victory__close material-symbols-outlined" data-victory="close"></span>
         <span class="victory__image material-symbols-outlined"></span>
         <h2 class="victory__title">Parabéns, você ganhou!</h2>
     </section>
-    <script src="main.js"></script>
+    <script src="main.js" type="module"></script>
 </body>
 </html>

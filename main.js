@@ -1,91 +1,30 @@
+import { flipcard } from "./js/game.js";
+import { selectLevel } from "./js/level-selector.js";
+
 const cards = document.querySelectorAll('[data-card]');
+const boardWrapper = document.querySelector('[data-wrapper]');
 const victoryModal = document.querySelector('[data-modal="victory"]');
-const board = document.querySelector('[data-board]');
+const board = document.querySelector('[data-wrapper]');
 const victoryModalCloseBtn = document.querySelector('[data-victory="close"]');
-let isThereAFlippedCard = false;
-let firstCard;
-let secondCard;
-let lockBoard = false;
-let highlightsCards = 0;
-const cardsInGame = 20;
+const levelSelector = document.querySelector('[data-select="level"]');
+let level = 'normal';
 
-function flipcard(){
-    if(lockBoard) return;
-    if (this === firstCard) return;
-    this.classList.add('card--flip');
-    if (!isThereAFlippedCard){
-        isThereAFlippedCard = true;
-        firstCard = this;
-        return;
+window.addEventListener('load', function(){
+    selectLevel('normal');
+})
+
+levelSelector.addEventListener('change', function(){
+    level = levelSelector.value;
+    selectLevel(level);
+});
+
+boardWrapper.addEventListener('click', function(event){
+    const target = event.target;
+
+    if (target.dataset.card === 'front' || target.dataset.card === 'back'){
+        const card = target.parentNode;
+        flipcard(card);
     }
-
-    secondCard = this;
-    isThereAFlippedCard = false;
-    
-    checkMatchCards();
-}
-
-function checkMatchCards(){
-    if (firstCard.dataset.card === secondCard.dataset.card ){
-        highlightMatches(firstCard);
-        highlightMatches(secondCard);
-        disablecards();
-        checkVictory();
-        return;
-    }
-    unflipCards();
-}
-
-function highlightMatches(card){
-    highlightsCards += 1;
-    card.classList.add('card--highlight')
-    card.dataset.match = 'yes';
-}
-
-function disablecards(){
-    firstCard.removeEventListener('click', flipcard);
-    secondCard.removeEventListener('click', flipcard);
-
-    resetBoard();
-}
-
-function unflipCards(){
-    lockBoard = true;
-    setTimeout(() => {
-        firstCard.classList.remove('card--flip');
-        secondCard.classList.remove('card--flip');
-
-        resetBoard();
-    }, 1200)
-}
-
-function resetBoard(){
-    [isThereAFlippedCard, lockBoard] = [false, false];
-    [firstCard, secondCard] = [null, null]
-}
-
-function checkVictory(){
-    console.log(highlightsCards);
-    console.log(cardsInGame);
-    if (highlightsCards === cardsInGame){
-        showVictory();
-    }
-}
-
-function showVictory(){
-    victoryModal.classList.remove('hide');
-    board.classList.add('blur');
-}
-
-(function shuffleCards(){
-    cards.forEach(card => {
-        let randomPosition = Math.floor(Math.random() * 20)
-        card.style.order = randomPosition;
-    })
-})()
-
-cards.forEach(function(card){
-    card.addEventListener('click', flipcard);
 })
 
 victoryModalCloseBtn.addEventListener('click', function(){
@@ -93,3 +32,6 @@ victoryModalCloseBtn.addEventListener('click', function(){
     board.classList.remove('blur');
     document.location.reload();
 })
+
+
+

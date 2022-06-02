@@ -11,10 +11,13 @@
     height: 36px;
     line-height: 36px;
     text-align: center;
-
-;
 }
 
 .level__select{
     height: 36px;
+}
+
+.game__instruction{
+    margin: 1rem;
+    text-align: center;
 }
